@@ -9,6 +9,7 @@ export default {
     const params = binding.value || {}
     stickyTop = params.stickyTop || 0
     zIndex = params.zIndex || 1000
+    className = params.className || 'stuck'
 
     elStyle.position = '-webkit-sticky'
     elStyle.position = 'sticky'
@@ -34,6 +35,7 @@ export default {
       }
       childStyle.position = 'fixed'
       active = true
+      el.classList.add(className)
     }
 
     const reset = () => {
@@ -42,6 +44,7 @@ export default {
       }
       childStyle.position = ''
       active = false
+      el.classList.remove(className)
     }
 
     const check = () => {
