@@ -2,6 +2,7 @@ let listenAction
 let stickyTop
 let params
 let zIndex
+let className
 
 export default {
   bind(el, binding) {
